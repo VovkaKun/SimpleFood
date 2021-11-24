@@ -9,7 +9,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 15px;
-  line-height: 18px;  
+  line-height: 1.5;  
   text-align: center;
   color: $dark;
   background-color: $silver-100;
@@ -43,7 +43,7 @@ body {
 }
 
 .title {
-  font-size: 36px;
+  font-size: 37px;
   line-height: 1.3;
   font-weight: 600;
   text-align: center;
@@ -55,40 +55,41 @@ body {
   background-color: $orange-900;
   outline-color: $orange-900;
   border-radius: 6px;
-  transition: 0.3s ease-in;
+  border: 2px solid transparent;
+  transition: background 0.7s, color 0.5s;
 
   &:focus {
     background-color: rgba(255, 122, 80, 0.1);
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    border: 2px solid $focus;
     color: $orange-900;
   }
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2), 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    border: 2px solid $focus;
     color: $orange-900;
   }
 
   &:active {
     background-color: rgba(255, 122, 80, 0.1);
     color: $orange-900;
-    box-shadow: none;
+    border: none;
   }
 }
 
 .card {
   background-color: $white;
-  max-width: 210px;
   min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  transition: box-shadow 0.3s;
+  border: 2px solid transparent;
+  transition: border 0.3s;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.01);
-    box-shadow: 0px 0px 0px 2px rgba(255, 122, 80, 0.7);
+    border: 2px solid $focus;
+    outline-color: $focus;
     border-radius: 5px;
   }
 
@@ -96,7 +97,7 @@ body {
     display: grid;
     grid-template-columns:repeat(5, 1fr);
     grid-gap: 30px;
-    margin-bottom: 55px;
+    margin-bottom: 45px;
   }
 
   &__img {
@@ -120,6 +121,69 @@ body {
     font-size: 14px;
     line-height: 1.3;
     padding: 7px 16px;
+  }
+}
+
+.sticker {
+  background-color: $white;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+  
+  &:hover {
+    box-shadow: 0px 3px 15px rgba(255, 104, 56, 0.5);
+    border-radius: 10px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  &__image {
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.3;
+    padding-left: 20px;
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    display: block;
+    margin: 0 10px 0 20px;
+  }
+
+  &__hours {
+    margin-right: auto;
+    font-size: 18px;
+  line-height: 30px;
+  }
+
+  &__link {
+    padding: 5px 27px 4px 28px;
+    border-radius: 20px;
+    margin-right: 20px;
+  }
+
+  &__arrow {
+    fill: $white;
+      &:hover {
+      fill: $orange-900;
+    }
   }
 }
 

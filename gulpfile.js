@@ -14,7 +14,7 @@ function browsersync() {
     server: {
       baseDir: 'app/'
     },
-    notofy: false
+    notify: false
   })
 }
 
@@ -23,8 +23,7 @@ function styles() {
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 versions'],
-      grid: true
+      overrideBrowserslist: ['last 10 versions']
     }))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
@@ -37,6 +36,7 @@ function cleanDist() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
     'app/js/main.js'
   ])
