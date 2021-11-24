@@ -5,13 +5,13 @@
 @import 'global';
 
 .header {
-  padding: 60px 0;
+  padding-top: 60px;
+  margin-bottom: 60px;
 
   &__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline-color: $orange-900;
   }
 
   &__list {
@@ -32,12 +32,12 @@
   &__btn {
     position: relative;
     padding: 10px;
-    outline-color: $orange-900;
+    outline-color: $focus;
     transition:  background-color 0.3s, fill 0.3s;
 
     &:focus {
       background-color: rgba(255, 122, 80, 0.1);
-      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border: 2px solid $focus;
       border-radius: 5px;
     }
 
@@ -103,7 +103,7 @@
     font-size: 18px;
     line-height: 21px;
     color: $dark;
-    outline-color: transparent;
+    outline-color: $focus;
     transition: text-shadow 0.3s, color 0.3s, background-color 0.3s;
     &:hover {
       color: $orange-900;
@@ -111,7 +111,7 @@
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.01);
-      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border: 2px solid $focus;
       border-radius: 5px;
     }
     
@@ -121,10 +121,7 @@
     &:active {
       color: $dark;
       text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    }
-
-    &:active:focus {
-      box-shadow: none;
+      border: 2px solid transparent;
     }
   }
 
@@ -134,11 +131,11 @@
 }
 
 .logo {
-  outline-color: $orange-900;
-  transition: opacity 0.3s, box-shadow 0.3s;
+  transition: opacity 0.3s;
+  outline-color: $focus;
 
   &:focus {
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    border: 2px solid $focus;
     border-radius: 5px;
   }
 
@@ -147,18 +144,15 @@
   }
 
   &:active {
+    border-color: transparent;
     opacity: 0.5;
   }
 
-  &:active:focus {
-    box-shadow: none;
-  }
 }
 
 .btn {
   position: relative;
   padding: 10px;
-  outline-color: transparent;
   transition: color 0.3s, background-color 0.3s;
 
   &__num {
@@ -178,11 +172,15 @@
       color: $orange-900;
       background-color: $white;
     }
+
+    &:focus {
+      outline-color: $focus;
+    }
   }
 
   &:focus {
     background-color: rgba(255, 122, 80, 0.1);
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    outline-color: $focus;
     border-radius: 5px;
   }
 
@@ -224,9 +222,9 @@
   }
 
   &__title {
-    width: 600;
     font-size: 66px;
     line-height: 1.3;
+    letter-spacing: 2px;
     color: $darkBlue-900;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -240,7 +238,7 @@
   &__text {
     font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
   }
 
   &__list {
@@ -254,22 +252,22 @@
     }
   }
 
-  &__button {
+  &__link {
     font-size: 18px;
     line-height: 1.3;
     padding: 12px 32px;
   }
 
-  &__btn {
+  &__details {
     font-size: 20px;
     line-height: 1.5;
     color: $darkBlue-900;
-    outline-color: $orange-900;
+    outline-color: $focus;
     transition: color 0.3s;
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.01);
-      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border: 2px solid $focus;
       border-radius: 5px;
     }
 
@@ -280,78 +278,68 @@
     &:active {
       color: $darkBlue-900;
       text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
-    }
-
-    &:active:focus {
-      box-shadow: none;
+      border-color: transparent;
     }
   }
 }
 
 .popular {
 
-  &__list {
+  &__product {
     display: flex;
     margin-bottom: 45px;
   }
 
   &__item {
+
     &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 18px;
     }
   }
 
   &__link {
-    position: relative;
-    display: block;
-    padding: 22px 32px 22px 86px;
+    display: flex;
+    align-items: center;
+    padding: 10px 32px 13px 32px;
     background-color: $white;
     border-radius: 5px;
     box-shadow: 0px 0px 0px 1px #ECECEC;
     color: $darkBlue-900;
     font-size: 20px;
     line-height: 1.3;
-    outline-color: $orange-900;
+    outline-color: $focus;
+    border: 2px solid transparent;
     transition: color 0.3s, background-color 0.3s ;
 
     &:active {
       background-color: $white;
       box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
-      border-radius: 5px;
       fill: $darkBlue-900;
     }
-
+    
     &:active:hover {
-      box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
       background-color: $white;
+      border-color: transparent;
       fill: inherit;
-      border-color: none;
       color: $darkBlue-900;
     }
 
     &:hover {
       background-color: rgba(255, 122, 80, 0.1);
-      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border: 2px solid $focus;
       border-radius: 5px;
       color: $orange-900;
       fill:$orange-900;
     }
 
     &:focus {
-      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border: 2px solid $focus;
     }
-  }    
+  }
 
   &__svg {
     display: block;
-    position: absolute;
-    left: 30px;
-    top: 12px;
-    cursor: pointer;
-  }
-
-  &__cards {
-    margin-bottom: 60px;
+    margin-right: 10px;
   }
 
   &__show-more {
@@ -363,14 +351,14 @@
     font-size: 20px;
     line-height: 1.5;
     color: $darkBlue-900;
-    outline-color: $orange-900;
     text-decoration: underline;
     transition: color 0.3s;
+    outline-color: $focus;
     
     &:focus {
       background-color: rgba(255, 255, 255, 0.01);
-      box-shadow: 0px 0px 0px 2px rgba(255, 122, 80, 0.7);
       border-radius: 5px;
+      border: 2px solid $focus;
     }
 
     &:hover {
@@ -382,10 +370,6 @@
       color: $darkBlue-900;
       text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
     }
-
-    &:active:focus {
-      box-shadow: none;
-    }
   }
 }
 
@@ -393,6 +377,258 @@
   background-color: $orange-900;
   color: $white;
   fill: $white;
+}
+
+.delivery {
+
+  &__inner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__list {
+    display: block;
+    margin-bottom: 42px;
+  }
+
+  &__desc {
+    text-align: left;
+    width: 39%;
+    margin-top: -35px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.5; 
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtext {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    line-height: 150%;
+  }
+  
+  &__icon {
+    margin-right: 30px;
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    padding: 12px 32px;
+    border: 2px solid transparent;
+  }
+}
+
+.title.title__delivery {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.title.title__restaurant {
+  margin-bottom: 45px;
+}
+
+
+.reviews {
+
+  &__item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  &__card {
+    position: relative;
+    width: 48%;
+    margin-right: 55px;
+  }
+
+  &__icon {
+    position: absolute;
+    fill: $gray;
+
+    &--top {
+      left: -37px;
+      top: 0;
+    }
+
+    &--bottom {
+      right: -47px;
+      bottom: 88px;
+    }
+  }
+
+  &__img {
+    border-radius: 50%;
+  }
+
+  &__text {
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__name {
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+    color: $orange-900;
+    padding-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  &__words {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}
+
+.slick {
+  &-dots {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-dots .slick-active button {
+    background-color: $orange-900;
+  }
+
+  &-dots li:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &-dots button {
+    font-size: 0;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $gray;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #FFF2ED;
+      border: 1px solid $focus;
+      border-radius: 50%;
+      
+    }
+
+    &:active {
+      background-color: #FFAE94;
+      border: none;
+      
+    }
+
+    &:focus {
+      border: 1px solid $orange-900;
+      border-radius: 50%;
+    }
+  }
+
+  &-arrow {
+    position: absolute;
+    bottom: -10px;
+    fill: $gray;
+    stroke: $gray;
+    transition: background-color 0.3s, fill 0.3s, stroke 0.3s;
+
+    &:hover {
+      fill: #FFAE94;
+      stroke: #FFAE94;
+      background-color: #FFF2ED;
+      border-radius: 50%;
+      outline-color: transparent;
+    }
+
+    &:active {
+      fill: $orange-900;
+      background-color: #FFF2ED;
+      border-radius: 50%;
+      stroke: none;
+      outline-color: transparent;
+    }
+
+    &:focus {
+      outline-color: $orange-900;
+      border-radius: 50%;
+    }
+  }
+}
+
+.nextArrow.slick-arrow {
+  left: 56%;
+}
+
+.prevArrow.slick-arrow {
+  right: 56%;
+}
+
+.active {
+  fill: $orange-900;
+  stroke: $orange-900;
+}
+
+.app {
+  
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__desc {
+    max-width: 540px;
+    text-align: left;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    
+  }
+
+}
+
+.title__app {
+  text-align: left;
+  margin-bottom: 45px;
 }
 
 .footer {
@@ -405,9 +641,10 @@
   }
 
   &__connect {
-    display: inline-block;;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     max-width: 200px;
-    width: 100%;
     margin-right: 70px;
   }
 
@@ -429,11 +666,11 @@
     color: $darkBlue-900;
     opacity: 0.9;
     padding: 13px 15px;
-    outline-color: $orange-900;
     background-color: $white;
     border: 1px solid #C2C2C2;
     border-radius: 5px;
     width: 100%;
+    outline-color: $focus;
 
     &::placeholder {
       font-size: 14px;
@@ -443,14 +680,14 @@
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.01);
-      box-shadow: 0px 0px 0px 2px rgba(255, 122, 80, 0.7);
       border-radius: 5px;
+      border: 2px solid $focus;
     }
   }
 
   &__button {
     position: relative;
-    padding: 13px 39px 13px 70px;
+    padding: 10px 33px 11px 72px;
   }
 
   &__icon-btn {
@@ -468,11 +705,8 @@
   }
 
   &__list {
-    display: inline-block;
     column-count: 3;
-    width: 50%;
-    max-width: 570px;
-    margin-right: 70px;
+    margin-right: 50px;
   }
 
   &__item {
@@ -485,7 +719,7 @@
     line-height: 1.3;
     letter-spacing: 0.01em;
     color: $dark;
-    outline-color: $orange-900;
+    outline-color: $focus;
     transition: text-shadow 0.3s, color 0.3s;
 
     &:hover {
@@ -494,7 +728,7 @@
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.01);
-      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border: 2px solid $focus;
       border-radius: 5px;
     }
     
@@ -504,10 +738,7 @@
     &:active {
       color: $dark;
       text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    }
-
-    &:active:focus {
-      box-shadow: none;
+      border: 2px solid transparent;
     }
   }
 }
@@ -515,22 +746,19 @@
 .address {
 
   &__item {
-    display: block;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
+    text-align: left;
   }
 
   &__cont {
-    display: block;
-    position: relative;
-    text-align: left;
+    display: flex;
+    align-items: center;
     font-size: 17px;
     font-style: normal;
     line-height: 1.3;
     color: $dark;
-    padding-left: 31px;
     fill:$silver-100;
     stroke: $dark;
-    outline-color: $orange-900;
     transition: text-shadow 0.3s, color 0.3s, stroke 0.3s, fill 0.3s;
 
     &:hover {
@@ -541,7 +769,7 @@
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.01);
-      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      outline-color: $focus;
       border-radius: 5px;
     }
     
@@ -552,45 +780,40 @@
       color: $dark;
       text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
     }
-
-    &:active:focus {
-      box-shadow: none;
-    }
   }
 
   &__icon {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    display: block;
+    margin-right: 7px;
   }
 }
 
 .social {
   display: flex;
-  justify-content: center;
   &__link {
     margin-right: 13px;
-    outline-color: $orange-900;
     border-radius: 50%;
     width: 100%;
     stroke: $dark;
     fill: $silver-200;
     transition: stroke 0.3s, fill 0.3s;
+
     &:hover {
       stroke: $dark;
       fill: $orange-900;
     }
+
     &:active {
       stroke: $orange-900;
       fill:#FFF2ED;
     }
+    &:focus {
+      outline-color: $focus;
+    }
   }
 }
 .copywritte {
-  padding: 30px 0;
+  padding: 23px 0;
   border-top: 1px solid #c2c2c234;
   font-size: 14px;
   line-height: 14px;
