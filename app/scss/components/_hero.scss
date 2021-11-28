@@ -1,0 +1,57 @@
+.hero{
+  margin-top: -5px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+
+  &__desc {
+    max-width: 450px;
+    margin-top: -10px;
+  }
+
+  &__title {
+    font-size: 66px;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    color: $darkBlue-900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__subject {
+    display: block;
+    color: $orange-900;
+  }
+
+  &__text {
+    font-size: 20px;
+    margin-bottom: 26px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+    margin-right: 34px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    padding: 12px 32px;
+  }
+
+  &__details {
+    font-size: 20px;
+    border: 2px solid transparent;
+    color: $darkBlue-900;
+    outline-color: $focus;
+    @extend %dynamic;
+  }
+}

@@ -1,0 +1,32 @@
+.app {
+  
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__desc {
+    max-width: 540px;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 20px;
+    color: #31352be6;
+    margin-bottom: 30px;
+  }
+  
+  &__link {
+    display: inline-block;
+    @extend %bg-img;
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+}
