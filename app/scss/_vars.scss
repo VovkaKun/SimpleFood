@@ -8,10 +8,33 @@ $gray: #C2C2C2;
 $focus: #ff6738b3;
 
 
-%background-images {
+%bg-img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+%dynamic {
+  transition: text-shadow 0.3s, color 0.3s, background-color 0.3s;
+  &:hover {
+    color: $orange-900;
+    text-decoration: none;
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 2px solid $focus;
+    border-radius: 5px;
+  }
+  
+  &:focus:hover {
+    color: $dark;
+  }
+  &:active {
+    color: $dark;
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    border: 2px solid transparent;
+  }
 }
 
 

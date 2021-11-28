@@ -1,0 +1,22 @@
+.menu {
+  display: flex;
+  margin-left: auto;
+
+&__item {
+  &:not(:last-child) {
+  margin-right: 45px;
+  }
+}
+
+&__link {
+  font-size: 18px;
+  color: $dark;
+  outline-color: $focus;
+  border: 2px solid transparent;
+  @extend %dynamic;
+}
+
+&__link--active {
+  color: $orange-900;
+}
+}

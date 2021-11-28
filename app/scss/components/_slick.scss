@@ -1,0 +1,85 @@
+.slick {
+  &-dots {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-dots .slick-active button {
+    background-color: $orange-900;
+  }
+
+  &-dots li:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &-dots button {
+    font-size: 0;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $gray;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #FFF2ED;
+      border: 1px solid $focus;
+      border-radius: 50%;
+      
+    }
+
+    &:active {
+      background-color: #FFAE94;
+      border: none;
+      
+    }
+
+    &:focus {
+      border: 1px solid $orange-900;
+      border-radius: 50%;
+    }
+  }
+
+  &-arrow {
+    position: absolute;
+    cursor: pointer;
+    bottom: -10px;
+    fill: $gray;
+    stroke: $gray;
+    transition: background-color 0.3s, fill 0.3s, stroke 0.3s;
+
+    &:hover {
+      fill: #FFAE94;
+      stroke: #FFAE94;
+      background-color: #FFF2ED;
+      border-radius: 50%;
+      outline-color: transparent;
+    }
+
+    &:active {
+      fill: $orange-900;
+      background-color: #FFF2ED;
+      border-radius: 50%;
+      stroke: none;
+      outline-color: transparent;
+    }
+
+    &:focus {
+      outline-color: $orange-900;
+      border-radius: 50%;
+    }
+  }
+}
+
+.nextArrow.slick-arrow {
+  left: 56%;
+}
+
+.prevArrow.slick-arrow {
+  right: 56%;
+}
+
+.active {
+  fill: $orange-900;
+  stroke: $orange-900;
+}

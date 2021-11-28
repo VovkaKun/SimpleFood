@@ -1,6 +1,6 @@
 $(function () {
 
-  var mixer = mixitup('.card__box')
+  var mixer = mixitup('.popular__box')
 
   $('.reviews__inner').slick({
     dots: true,
