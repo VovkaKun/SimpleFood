@@ -2,20 +2,16 @@
   font-size: 37px;
   line-height: 1.3;
   font-weight: 600;
-  text-align: center;
+  text-align: left;
   margin-bottom: 60px;
 
-  &.title--delivery {
-    text-align: left;
+  &--popular,
+  &--restaurant,
+  &--reviews {
+    text-align: center;
+  }
+  
+  &--delivery {
     margin-bottom: 30px;
-  }
-  
-  &.title--restaurant {
-    margin-bottom: 45px;
-  }
-  
-  &--app {
-    margin-bottom: 45px;
-    text-align: left;
   }
 }

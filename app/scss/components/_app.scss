@@ -20,9 +20,17 @@
   &__link {
     display: inline-block;
     @extend %bg-img;
-    width: 140px;
-    height: 40px;
     border-radius: 5px;
+    
+    &--apple {
+      width: 120px;
+      height: 40px;
+    }
+
+    &--google {
+      width: 135px;
+      height: 40px;
+    }
 
     &:not(:last-child) {
       margin-right: 30px;

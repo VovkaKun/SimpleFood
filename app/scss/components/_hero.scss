@@ -37,14 +37,11 @@
   }
 
   &__item {
+
     &:not(:last-child) {
     margin-right: 34px;
     }
-  }
 
-  &__link {
-    font-size: 18px;
-    padding: 12px 32px;
   }
 
   &__details {
