@@ -2,12 +2,6 @@
   padding-top: 60px;
   margin-bottom: 60px;
 
-  &__menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   &__list {
     display: flex;
   }
@@ -15,7 +9,7 @@
   &__item {
 
     &:not(:last-child) {
-      padding: 0 15px 0 50px;
+      padding: 0 8px 0 50px;
     }
 
     &:not(:first-child) {
@@ -34,18 +28,6 @@
       background-color: rgba(255, 122, 80, 0.1);
       border: 2px solid $focus;
       border-radius: 5px;
-    }
-
-    &:active {
-      background-color: #FFF2ED;
-      fill: $darkBlue-900;
-    }
-
-    &:active:hover {
-      background-color: #FFF2ED;
-    }
-
-    &:active:focus {
       box-shadow: 0px 0px 0px 0px #FFF2ED;
       fill: $darkBlue-900;
     }
@@ -55,6 +37,13 @@
       border-radius: 5px;
       fill: $white;
     }
+
+    &:active {
+      background-color: #FFF2ED;
+      fill: $darkBlue-900;
+      border: 2px solid transparent;
+    }
+
   }
 
   &__num {
