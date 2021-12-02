@@ -1,4 +1,5 @@
 .logo {
+  display: block;
   transition: opacity 0.3s;
   outline-color: $focus;
 
@@ -16,4 +17,7 @@
     opacity: 0.5;
   }
 
+  @media (max-width: 768px) {
+    z-index: 10;
+  }
 }

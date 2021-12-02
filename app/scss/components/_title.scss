@@ -14,4 +14,30 @@
   &--delivery {
     margin-bottom: 30px;
   }
+
+  
+  @media (max-width: 1200px) {
+    font-size: 27px;
+    margin-bottom: 30px;
+
+    &--app {
+      margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    margin-bottom: 30px;
+
+    &--app {
+      margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 24px;
+
+    &--app {
+      margin-bottom: 15px;
+    }
+  }
 }

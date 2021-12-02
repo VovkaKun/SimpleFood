@@ -68,4 +68,34 @@
   &__svg{
     display: block;
   }
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+    margin-bottom: 0;
+
+    &__bg .menu__list.active {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 75px;
+      top: 0;
+      bottom: 0;
+      background-color: $white;
+      z-index: 9;
+    }
+  
+
+    &__item {
+
+      &:not(:first-child) {
+        margin-right: 57px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 0;
+        padding-left: 23px;
+      }
+    }
+  }
 }
+

@@ -16,6 +16,7 @@ $focus: #ff6738b3;
 
 %dynamic {
   transition: text-shadow 0.3s, color 0.3s, background-color 0.3s;
+  
   &:hover {
     color: $orange-900;
     text-decoration: none;
@@ -30,12 +31,16 @@ $focus: #ff6738b3;
   &:focus:hover {
     color: $dark;
   }
+
   &:active {
     color: $dark;
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
     border: 2px solid transparent;
   }
 }
+
+
+
 
 
 
