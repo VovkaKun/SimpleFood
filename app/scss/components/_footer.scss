@@ -17,6 +17,7 @@
 
   &__logo {
     margin-bottom: 30px;
+    z-index: 0;
   }
 
   &__label {
@@ -99,5 +100,34 @@
     border: 2px solid transparent;
     outline-color: $focus;
     @extend %dynamic;
+  }
+
+  @media (max-width: 1200px) {
+
+    &__inner {
+      margin-bottom: 40px;
+    }
+
+    &__connect {
+      margin: 0 20px 30px 0;
+    }
+
+    &__list {
+      column-count: 2;
+      margin-right: 20px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__list {
+      column-count: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    &__inner {
+      flex-direction: column;
+    }
   }
 }

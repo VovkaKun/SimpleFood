@@ -10,14 +10,22 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="body">
 
-  <header class="header">
+  <header class="header header__bg">
     <div class="container">
       <nav class="menu">
         <a class="logo" href="#">
           <img class="logo__img" src="images/icons/logo.svg" alt="логопит сервиса доставки еды" width="200" height="39">
         </a>
+        <button class="burger" type="button">
+          <span class="sr-only">кнопка для открытия меню</span>
+          <span class="burger__line"></span>
+        </button>
+        <span class="burger-fix" type="button">
+          <span class="sr-only">декоративная кнопка меню</span>
+          <span class="burger__line-fix"></span>
+        </span>
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link menu__link--active" href="#">Главная</a>
@@ -127,7 +135,7 @@
             </button>
           </li>
         </ul>
-        <ul class="popular__box">
+        <ul class="product">
 
           <li class="product__item mix category-a">
             <article class="product-card ">
@@ -326,8 +334,8 @@
           Лучшие рестораны
         </h2>
         <ul class="restaurant__list">
-          <li class="restaurant-card__item">
-            <article class="restaurant-card">
+          <li class="restaurant-card">
+            <article class="restaurant-card__item">
               <img class="restaurant-card__image" src="images/img-jpg/1res.jpg" width="370" height="300"
                 alt="ресторанные блюда Blaze Pizza">
               <h3 class="restaurant-card__name">Blaze Pizza</h3>
@@ -344,8 +352,8 @@
               </div>
             </article>
           </li>
-          <li class="restaurant-card__item">
-            <article class="restaurant-card">
+          <li class="restaurant-card">
+            <article class="restaurant-card__item">
               <img class="restaurant-card__image" src="images/img-jpg/2res.jpg" width="370" height="300"
                 alt="ресторанные блюда Pizza Runcho">
               <h3 class="restaurant-card__name">Pizza Runcho</h3>
@@ -362,8 +370,8 @@
               </div>
             </article>
           </li>
-          <li class="restaurant-card__item">
-            <article class="restaurant-card">
+          <li class="restaurant-card">
+            <article class="restaurant-card__item">
               <img class="restaurant-card__image" src="images/img-jpg/3res.jpg" width="370" height="300"
                 alt="ресторанные блюда Pizza Hut">
               <h3 class="restaurant-card__name">Pizza Hut</h3>
@@ -380,8 +388,8 @@
               </div>
             </article>
           </li>
-          <li class="restaurant-card__item">
-            <article class="restaurant-card">
+          <li class="restaurant-card">
+            <article class="restaurant-card__item">
               <img class="restaurant-card__image" src="images/img-jpg/4res.jpg" width="370" height="300"
                 alt="ресторанные блюда McDonald`s">
               <h3 class="restaurant-card__name">McDonald`s</h3>
@@ -398,8 +406,8 @@
               </div>
             </article>
           </li>
-          <li class="restaurant-card__item">
-            <article class="restaurant-card">
+          <li class="restaurant-card">
+            <article class="restaurant-card__item">
               <img class="restaurant-card__image" src="images/img-jpg/5res.jpg" width="370" height="300"
                 alt="ресторанные блюда KFC">
               <h3 class="restaurant-card__name">KFC</h3>
@@ -416,8 +424,8 @@
               </div>
             </article>
           </li>
-          <li class="restaurant-card__item">
-            <article class="restaurant-card">
+          <li class="restaurant-card">
+            <article class="restaurant-card__item">
               <img class="restaurant-card__image" src="images/img-jpg/6res.jpg" width="370" height="300"
                 alt="ресторанные блюда Star Burgers">
               <h3 class="restaurant-card__name">Star Burgers</h3>
@@ -549,7 +557,7 @@
       <div class="container">
         <div class="app__inner">
           <div class="app__desc">
-            <h2 class="title">
+            <h2 class="title title--app">
               Скачайте мобильное приложение
             </h2>
             <p class="app__text">

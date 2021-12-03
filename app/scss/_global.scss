@@ -12,6 +12,11 @@ body {
   line-height: 1.5;  
   color: $dark;
   background-color: $silver-100;
+
+  &.bg {
+    background-color: #00000080;
+    overflow: hidden;
+  }
 }
 
 .main {
@@ -39,6 +44,10 @@ body {
 
 .section {
   margin-bottom: 115px;
+
+  @media (max-width: 992px) {
+    margin-bottom: 40px;
+  }
 }
 
 

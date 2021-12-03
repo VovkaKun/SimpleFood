@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     padding: 10px 32px 13px;
+    width: max-content;
     background-color: $white;
     border-radius: 5px;
     box-shadow: 0px 0px 0px 1px #ECECEC;
@@ -46,6 +47,7 @@
     }
 
     &.mixitup-control-active {
+      height: 100%;
       background-color: $orange-900;
       color: $white;
       fill: $white;
@@ -71,10 +73,61 @@
     @extend %dynamic;
   }
 
-  &__box {
-    display: grid;
-    grid-template-columns:repeat(5, 1fr);
-    grid-gap: 30px;
-    margin-bottom: 45px;
+  @media (max-width: 1200px) {
+
+    &__svg {
+      width: 35px;
+    }
+
+    &__btn {
+      font-size: 18px;
+      padding: 5px 20px 5px;
+    }
+  }
+
+  @media (max-width: 992px) {
+
+    &__filter {
+      max-width: 100%;
+      overflow-x: scroll;
+      display: flex;
+    }
+
+    &__filter::-webkit-scrollbar {
+      opacity: 0;
+    }
+
+    &__filter::-webkit-scrollbar-track {
+      opacity: 0;
+    }
+
+    &__filter::-webkit-scrollbar-thumb {
+      opacity: 0;
+    }
+    
+    &__svg {
+      width: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    &__filter {
+      margin-bottom: 30px;
+    }
+
+    &__svg {
+      width: 20px;
+    }
+
+    &__btn {
+      font-size: 14px;
+      padding: 0px 12px 0px;
+    }
+  }
+
+  &__btn.trans {
+    display: none;
   }
 }
+
