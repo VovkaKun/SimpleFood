@@ -8,15 +8,19 @@
     margin-left: auto;
     height: 100%;
   }
-  
-  &__item {
-  
-    &:not(:last-child) {
-    margin-right: 40px;
-    }
-    
+
+  &__item:last-of-type{
+    padding-right: 50px;
   }
   
+  &__item + &__item{
+    margin-left: 40px;  //не процювало через нот ласт чайлд, не розумію чому
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+  }
+
   &__link {
     font-size: 18px;
     color: $dark;
@@ -33,7 +37,7 @@
 
     .burger,
     .burger-fix {
-      width: 44px;
+      width: 47px;
       height: 44px;
       display: flex;
       justify-content: center;
@@ -47,6 +51,16 @@
       padding: 7px;
       outline-color: $orange-900;
       cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s, background-color 0.3s;
+
+      &:focus {
+        border: 2px solid $orange-900;
+      }
+
+      &:active {
+        background-color: #FFF2ED;
+      }
 
       &.active {
         background-color: transparent;
@@ -58,16 +72,16 @@
 
         .burger__line::before {
           transform: rotate(45deg);
-          width: 18px;
-          left: 7px;
+          width: 25px;
+          left: 2px;
           top: 0;
           transition: top 0.5s, transform 0.2s;
         }
 
         .burger__line::after {
           transform: rotate(-45deg);
-          width: 18px;
-          left: 7px;
+          width: 25px;
+          left: 2px;
           top: 0;
           transition: top 0.5s, transform 0.2s;
         }
@@ -113,7 +127,18 @@
       bottom: 0;
       z-index: 2;
       transition: top 0.5s;
+
+      @media (max-width: 768px) {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 75px;
+        top: 0;
+        bottom: 0;
+        background-color: $white;
+        z-index: 9;
       }
+    }
   
     &__list {
       position: absolute;
@@ -128,19 +153,14 @@
     &__item {
       padding: 0 10px;
 
-      &:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
-
       &:first-child {
         border-top: 1px solid #eeeff3;
-        padding-top: 25px;
       }
     }
 
     &__link {
       display: block;
+      padding: 10px;
     }
   }
 
