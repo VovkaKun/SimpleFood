@@ -1,0 +1,46 @@
+.product-card {
+  text-align: center;
+  background-color: $white;
+  border: 2px solid transparent;
+  padding: 20px 10px;
+  transition: border 0.3s;
+
+  &.trans {
+    display: none;
+  }
+
+  &:hover {
+    border: 2px solid $focus;
+    outline-color: $focus;
+    border-radius: 5px;
+  }
+
+  &__img {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  &__name{
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical; 
+    overflow: hidden;
+    min-height: 2.6em;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  &__price {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+  
+  &__button {
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 7px 16px;
+  }
+}

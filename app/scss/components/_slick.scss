@@ -41,7 +41,7 @@
 .slick-arrow {
   position: absolute;
   cursor: pointer;
-  bottom: -10px;
+  bottom: -15px;
   fill: $gray;
   stroke: $gray;
   transition: background-color 0.3s, fill 0.3s, stroke 0.3s;
@@ -66,15 +66,27 @@
     outline-color: $orange-900;
     border-radius: 50%;
   }
+
+  @media (max-width: 992px) {
+    bottom: auto;
+    margin-top: 7px;
+  }
 }
 
 
-.nextArrow.slick-arrow {
+.nextarrow__btn.slick-arrow {
   left: 56%;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 6px;
+  margin-left: 10px;
 
   @media (max-width: 992px) {
     left: 77%;
     top: 20%;
+    padding: 0;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 
   @media (max-width: 576px) {
@@ -82,12 +94,26 @@
   }
 }
 
-.prevArrow.slick-arrow {
+.prevarrow__btn.slick-arrow {
   right: 56%;
-
+  width: 34px;
+  height: 34px;
+  margin-bottom: 6px;
+  margin-right: 10px;
+  
   @media (max-width: 992px) {
     right: 77%;
     top: 20%;
+    padding: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .nextArrow,
+  .prevArrow {
+    @media (max-width: 992px) {
+      margin-left: -6px;
+    }
   }
 
   @media (max-width: 576px) {

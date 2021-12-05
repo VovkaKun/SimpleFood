@@ -3,22 +3,22 @@
 @import 'libs';
 @import 'vars';
 @import 'global';
+@import 'components/sections/header';
+@import 'components/sections/hero';
+@import 'components/sections/popular';
+@import 'components/sections/delivery';
+@import 'components/sections/reviews';
+@import 'components/sections/app';
+@import 'components/sections/footer';
+@import 'components/sections/restaurant';
 @import 'components/button';
-@import 'components/header';
 @import 'components/menu';
 @import 'components/logo';
-@import 'components/hero';
-@import 'components/btn';
-@import 'components/popular';
-@import 'components/delivery';
-@import 'components/reviews';
 @import 'components/slick';
-@import 'components/app';
-@import 'components/footer';
 @import 'components/address';
 @import 'components/social';
-@import 'components/restaurant';
 @import 'components/title';
-@import 'components/copyright';
-@import 'components/product';
-@import 'components/restaurant-card__item';
+@import 'components/product-card';
+@import 'components/restaurant-card';
+
+

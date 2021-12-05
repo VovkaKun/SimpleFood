@@ -28,4 +28,41 @@
     border: 2px solid transparent;
   }
   
+  &.footer__button {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.3;
+    position: relative;
+    padding: 10px 33px 11px 72px;
+    fill: $white;
+
+    &:hover {
+      fill: $orange-900;
+    }
+
+    &:active {
+      fill: $orange-900;
+    }
+
+    &:focus {
+      fill: $orange-900;
+    }
+  }
+
+  &.hero__button {
+    @media (max-width: 992px) {
+      display: block;
+      padding: 8px 24px;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+  }
+
+  &.delivery__button {
+    @media (max-width: 768px) {
+      padding: 12px 32px;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+  }
 }

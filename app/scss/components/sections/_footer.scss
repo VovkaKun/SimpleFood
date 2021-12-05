@@ -5,6 +5,14 @@
     display: flex;
     justify-content: flex-start;
     margin-bottom: 60px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__connect {
@@ -13,6 +21,14 @@
     justify-content: flex-start;
     max-width: 200px;
     margin-right: 70px;
+
+    @media (max-width: 1200px) {
+      margin: 0 20px 30px 0;
+    }
+
+    @media (max-width: 768px) {
+      order: -1;
+    }
   }
 
   &__logo {
@@ -51,26 +67,6 @@
     }
   }
 
-  &__button {
-    font-size: 14px;
-    line-height: 1.3;
-    position: relative;
-    padding: 10px 33px 11px 72px;
-    fill: $white;
-
-    &:hover {
-      fill: $orange-900;
-    }
-
-    &:active {
-      fill: $orange-900;
-    }
-
-    &:focus {
-      fill: $orange-900;
-    }
-  }
-  
   &__icon-btn {
     display: inline-block;
     position: absolute;
@@ -85,6 +81,15 @@
   &__list {
     column-count: 3;
     margin-right: 50px;
+
+    @media (max-width: 1200px) {
+      column-count: 2;
+      margin-right: 20px;
+    }
+
+    @media (max-width: 992px) {
+      column-count: 1;
+    }
   }
 
   &__item {
@@ -102,32 +107,11 @@
     @extend %dynamic;
   }
 
-  @media (max-width: 1200px) {
-
-    &__inner {
-      margin-bottom: 40px;
-    }
-
-    &__connect {
-      margin: 0 20px 30px 0;
-    }
-
-    &__list {
-      column-count: 2;
-      margin-right: 20px;
-    }
-  }
-
-  @media (max-width: 992px) {
-    &__list {
-      column-count: 1;
-    }
-  }
-
-  @media (max-width: 768px) {
-
-    &__inner {
-      flex-direction: column;
-    }
+  &__copyright {
+    text-align: center;
+    padding: 23px 0;
+    border-top: 1px solid #c2c2c234;
+    font-size: 14px;
+    line-height: 14px;
   }
 }

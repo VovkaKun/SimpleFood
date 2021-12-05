@@ -2,6 +2,14 @@
   padding-top: 60px;
   margin-bottom: 60px;
 
+  @media (max-width: 992px) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+
   &__list {
     display: flex;
   }
@@ -9,11 +17,17 @@
   &__item {
 
     &:not(:last-child) {
-      padding: 0 8px 0 50px;
+      padding-right: 14px;
     }
 
-    &:not(:first-child) {
-      margin-right: 13px;
+    @media (max-width: 768px) {
+      &:not(:first-child) {
+        margin-right: 57px;
+      }
+
+      &:not(:last-child) {
+        padding-left: 23px;
+      }
     }
   }
 
@@ -67,35 +81,6 @@
 
   &__svg{
     display: block;
-  }
-
-  @media (max-width: 768px) {
-    padding: 20px 0;
-    margin-bottom: 0;
-
-    &__bg .menu__list.active {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 75px;
-      top: 0;
-      bottom: 0;
-      background-color: $white;
-      z-index: 9;
-    }
-  
-
-    &__item {
-
-      &:not(:first-child) {
-        margin-right: 57px;
-      }
-
-      &:not(:last-child) {
-        margin-right: 0;
-        padding-left: 23px;
-      }
-    }
   }
 }
 
