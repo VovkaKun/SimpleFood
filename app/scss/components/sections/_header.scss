@@ -15,9 +15,8 @@
   }
 
   &__item {
-
     &:not(:last-child) {
-      padding-right: 14px;
+      margin-right: 14px;
     }
 
     @media (max-width: 768px) {
@@ -26,7 +25,7 @@
       }
 
       &:not(:last-child) {
-        padding-left: 23px;
+        margin-left: 23px;
       }
     }
   }
@@ -36,13 +35,13 @@
     padding: 10px;
     border: 2px solid transparent;
     outline-color: $focus;
-    transition:  background-color 0.3s, fill 0.3s;
+    transition: background-color 0.3s, fill 0.3s;
 
     &:focus {
       background-color: rgba(255, 122, 80, 0.1);
       border: 2px solid $focus;
       border-radius: 5px;
-      box-shadow: 0px 0px 0px 0px #FFF2ED;
+      box-shadow: 0px 0px 0px 0px #fff2ed;
       fill: $darkBlue-900;
     }
 
@@ -53,11 +52,10 @@
     }
 
     &:active {
-      background-color: #FFF2ED;
+      background-color: #fff2ed;
       fill: $darkBlue-900;
       border: 2px solid transparent;
     }
-
   }
 
   &__num {
@@ -79,8 +77,7 @@
     }
   }
 
-  &__svg{
+  &__svg {
     display: block;
   }
 }
-
