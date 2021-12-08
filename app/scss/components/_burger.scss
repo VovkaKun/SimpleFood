@@ -1,0 +1,104 @@
+.burger {
+  @media (max-width: 768px) {
+    width: 47px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    top: 23px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    border: 0;
+    padding: 7px;
+    outline-color: $orange-900;
+    border: 2px solid transparent;
+    z-index: 11;
+    transition: border 0.3s, background-color 0.3s;
+
+    &:focus {
+      border: 2px solid $orange-900;
+    }
+
+    &:active {
+      background-color: #fff2ed;
+    }
+
+    &__line-fix,
+    &__line {
+      position: relative;
+      width: 30px;
+      height: 2px;
+      background-color: #000;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -10px;
+        width: 30px;
+        height: 2px;
+        background-color: $dark;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        top: 10px;
+        width: 30px;
+        height: 2px;
+        background-color: $dark;
+      }
+    }
+
+    &.active {
+      background-color: transparent;
+      right: 100px;
+
+      &:active {
+        background-color: #fff2ed;
+        color: $focus;
+      }
+    }
+
+    &__line.active {
+      background-color: transparent;
+    }
+
+    &__line.active::before {
+      transform: rotate(45deg);
+      width: 25px;
+      left: 2px;
+      top: 0;
+      transition: top 0.5s, transform 0.2s;
+    }
+
+    &__line.active::after {
+      transform: rotate(-45deg);
+      width: 25px;
+      left: 2px;
+      top: 0;
+      transition: top 0.5s, transform 0.2s;
+    }
+  }
+
+  &-fix {
+    width: 47px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    top: 23px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 0;
+    padding: 7px;
+    outline-color: $orange-900;
+    border: 2px solid transparent;
+  }
+}

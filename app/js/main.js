@@ -6,18 +6,18 @@ $(function () {
 
   $('.menu__list, .address').on('click', function () {
     $('.burger').removeClass('active');
+    $('.burger__line').removeClass('active');
     $('.body').removeClass('bg');
-    $('.popular__btn').removeClass('trans');
-    $('.product-card ').removeClass('trans');
-    $('.hero__desc ').removeClass('trans');
+    $('.main').removeClass('trans');
+    $('.footer').removeClass('trans');
   });
 
   $('.burger').on('click', function () {
     $('.body').toggleClass('bg');
-    $('.popular__btn').toggleClass('trans');
-    $('.product-card ').toggleClass('trans');
-    $('.hero__desc ').toggleClass('trans');
+    $('.main').toggleClass('trans');
     $('.menu__list').toggleClass('active');
+    $('.burger__line').toggleClass('active');
+    $('.footer').toggleClass('trans');
   });
 
 

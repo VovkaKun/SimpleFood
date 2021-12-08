@@ -20,10 +20,10 @@
     margin-bottom: 10px;
   }
 
-  &__name{
+  &__name {
     -webkit-line-clamp: 2;
     display: -webkit-box;
-    -webkit-box-orient: vertical; 
+    -webkit-box-orient: vertical;
     overflow: hidden;
     min-height: 2.6em;
     text-align: center;
@@ -35,9 +35,9 @@
     display: block;
     text-align: center;
     font-size: 15px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
   }
-  
+
   &__button {
     font-size: 14px;
     line-height: 1.3;

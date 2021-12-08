@@ -1,4 +1,9 @@
 .footer {
+  @media (max-width: 768px) {
+    &.trans {
+      display: none;
+    }
+  }
 
   &__inner {
     margin-right: auto;

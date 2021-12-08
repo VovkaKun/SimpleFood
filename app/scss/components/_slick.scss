@@ -1,4 +1,3 @@
-
 .slick-dots {
   display: flex;
   justify-content: center;
@@ -22,16 +21,16 @@
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #FFF2ED;
+    background-color: #fff2ed;
     border: 1px solid $focus;
     border-radius: 50%;
   }
 
   &:active {
-    background-color: #FFAE94;
+    background-color: #ffae94;
     border: none;
   }
-  
+
   &:focus {
     border: 1px solid $orange-900;
     border-radius: 50%;
@@ -47,16 +46,16 @@
   transition: background-color 0.3s, fill 0.3s, stroke 0.3s;
 
   &:hover {
-    fill: #FFAE94;
-    stroke: #FFAE94;
-    background-color: #FFF2ED;
+    fill: #ffae94;
+    stroke: #ffae94;
+    background-color: #fff2ed;
     border-radius: 50%;
     outline-color: transparent;
   }
 
   &:active {
     fill: $orange-900;
-    background-color: #FFF2ED;
+    background-color: #fff2ed;
     border-radius: 50%;
     stroke: none;
     outline-color: transparent;
@@ -70,54 +69,6 @@
   @media (max-width: 992px) {
     bottom: auto;
     margin-top: 7px;
-  }
-}
-
-
-.nextarrow__btn.slick-arrow {
-  left: 56%;
-  width: 34px;
-  height: 34px;
-  margin-bottom: 6px;
-  margin-left: 10px;
-
-  @media (max-width: 992px) {
-    left: 77%;
-    top: 20%;
-    padding: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-  }
-
-  @media (max-width: 576px) {
-    top: 7%;
-  }
-}
-
-.prevarrow__btn.slick-arrow {
-  right: 56%;
-  width: 34px;
-  height: 34px;
-  margin-bottom: 6px;
-  margin-right: 10px;
-  
-  @media (max-width: 992px) {
-    right: 77%;
-    top: 20%;
-    padding: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-  }
-
-  .nextArrow,
-  .prevArrow {
-    @media (max-width: 992px) {
-      margin-left: -6px;
-    }
-  }
-
-  @media (max-width: 576px) {
-    top: 7%;
   }
 }
 
