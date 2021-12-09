@@ -23,9 +23,11 @@
       &:not(:first-child) {
         margin-right: 57px;
       }
+    }
 
-      &:not(:last-child) {
-        margin-left: 23px;
+    @media (max-width: 576px) {
+      &:first-child {
+        margin-right: 0;
       }
     }
   }

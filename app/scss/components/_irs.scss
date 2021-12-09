@@ -1,0 +1,49 @@
+.irs {
+  &--flat {
+    height: 47px;
+  }
+
+  &--round .irs-line {
+    top: 33px;
+    height: 2px;
+    background-color: $gray;
+  }
+
+  &--round .irs-bar {
+    top: 33px;
+    height: 2px;
+    background-color: $orange-900;
+  }
+
+  &--round .irs-handle.state:hover,
+  &--round .irs-handle:hover {
+    background-color: $orange-900;
+  }
+
+  &--round .irs-handle {
+    top: 24px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $orange-900;
+  }
+
+  &--round .irs-handle {
+    border: none;
+  }
+
+  &--flat .irs-handle > i:first-child {
+    display: none;
+  }
+}
+
+.irs-from,
+.irs-to,
+.irs-single {
+  display: none;
+}
+
+.irs-min,
+.irs-max {
+  display: none;
+}

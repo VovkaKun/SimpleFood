@@ -9,15 +9,17 @@
     height: 100%;
   }
 
-  &__item:last-of-type {
-    padding-right: 50px;
-  }
+  &__item {
+    &:last-of-type {
+      margin-right: 50px;
+    }
 
-  &__item + &__item {
-    margin-left: 40px;
+    & + & {
+      margin-left: 40px;
 
-    @media (max-width: 768px) {
-      margin-left: 0;
+      @media (max-width: 768px) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -29,35 +31,29 @@
     @extend %dynamic;
   }
 
-  &__link--active {
+  &__link.active {
     color: $orange-900;
   }
 
-  @media (max-width: 768px) {
-    &__list.active {
-      padding-top: 90px;
+  // @media (max-width: 768px) {
+  &__list.active {
+    @media (max-width: 768px) {
+      content: "";
       position: absolute;
+      padding-top: 90px;
       display: block;
       top: 0;
       right: 75px;
       left: 0;
       bottom: 0;
-      z-index: 2;
       transition: top 0.5s;
-
-      @media (max-width: 768px) {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 75px;
-        top: 0;
-        bottom: 0;
-        background-color: $white;
-        z-index: 9;
-      }
+      background-color: $white;
+      z-index: 9;
     }
+  }
 
-    &__list {
+  &__list {
+    @media (max-width: 768px) {
       position: absolute;
       display: block;
       top: -1000%;
@@ -66,18 +62,20 @@
       bottom: 0;
       transition: top 0.5s;
     }
+  }
 
-    &__item {
-      padding: 0 10px;
+  &__item {
+    @media (max-width: 768px) {
+      padding: 10px;
 
       &:first-child {
         border-top: 1px solid #eeeff3;
       }
-    }
 
-    &__link {
-      display: block;
-      padding: 10px;
+      &__link {
+        display: block;
+        padding: 10px;
+      }
     }
   }
 }

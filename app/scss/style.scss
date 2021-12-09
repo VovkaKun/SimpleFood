@@ -11,6 +11,11 @@
 @import "components/sections/app";
 @import "components/sections/footer";
 @import "components/sections/restaurant";
+@import "components/sections/restaurant-catalog";
+@import "components/sections/shop";
+@import "components/restaurant-card";
+@import "components/restaurant-card__catalog";
+@import "components/breadcrumbs";
 @import "components/button";
 @import "components/burger";
 @import "components/menu";
@@ -19,6 +24,14 @@
 @import "components/address";
 @import "components/social";
 @import "components/product-card";
-@import "components/restaurant-card";
+@import "components/product-card__catalog";
 @import "components/prevarrow";
 @import "components/nextarrow";
+@import "components/filter-price";
+@import "components/filter-categories";
+@import "components/filter-offers";
+@import "components/filter";
+@import "components/irs";
+@import "components/prospectus";
+@import "components/jq-selectbox";
+@import "components/pagination";

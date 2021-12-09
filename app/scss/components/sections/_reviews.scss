@@ -42,10 +42,8 @@
     &--bottom {
       right: -47px;
       bottom: 88px;
-    }
 
-    @media (max-width: 992px) {
-      &--bottom {
+      @media (max-width: 992px) {
         right: -40px;
       }
     }

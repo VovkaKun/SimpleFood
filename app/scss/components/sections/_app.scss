@@ -69,13 +69,8 @@
 
   &__img {
     @media (max-width: 1200px) {
-      width: 470px;
-      height: 280px;
-    }
-
-    @media (max-width: 992px) {
-      width: 370px;
-      height: 220px;
+      width: 45%;
+      height: auto;
     }
 
     @media (max-width: 768px) {

@@ -1,0 +1,37 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+
+  &__list {
+    display: flex;
+    padding: 0 6px;
+  }
+
+  &__item {
+    padding: 0 3px;
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1;
+    padding: 12px 18px;
+    background-color: #faeded;
+    color: $darkBlue-900;
+    &--active {
+      border: 1px solid $darkBlue-900;
+      border-radius: 3px;
+    }
+  }
+
+  &__arrows {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+    background-color: #faeded;
+    width: 11px;
+    height: 20px;
+    padding: 22px;
+  }
+}

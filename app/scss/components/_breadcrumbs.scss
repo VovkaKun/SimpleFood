@@ -1,0 +1,37 @@
+.breadcrumbs {
+  padding: 24px 0;
+  background-color: #ff7a501a;
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    color: #505050;
+    font-size: 14px;
+    line-height: 1.2;
+    border: 2px solid transparent;
+    outline-color: $focus;
+
+    &:focus {
+      border: 2px solid $focus;
+      border-radius: 3px;
+    }
+  }
+
+  &__item {
+    padding-right: 16px;
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../../images/icons/breadcrumbs-arrow.svg");
+      width: 6px;
+      height: 10px;
+    }
+  }
+}

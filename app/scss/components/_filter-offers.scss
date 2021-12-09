@@ -1,0 +1,59 @@
+.filter-offers {
+  height: 19%;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    padding-left: 26px;
+    position: relative;
+    transition: color 0.3s;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+
+    &:hover {
+      color: $orange-900;
+    }
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &:checked + .filter-offers__checkbox {
+      background-image: url("../../images/icons/checkbox.svg");
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 1px solid $darkBlue-900;
+    }
+  }
+
+  &__checkbox {
+    background-color: #faeded;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    outline-color: $focus;
+    transform: translateY(-50%);
+    transition: border 0.3s;
+
+    &:hover {
+      border: 1px solid $orange-900;
+    }
+  }
+
+  &__text {
+    padding-left: 12px;
+  }
+}
