@@ -1,0 +1,63 @@
+.jq-selectbox {
+  &__select {
+    margin-left: 11px;
+    height: auto;
+    padding: 7px 41px 7px 15px;
+    background: $white;
+    border: 1px solid $gray;
+    border-radius: 3px;
+    box-shadow: none;
+    text-shadow: none;
+    color: $darkBlue-900;
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+
+    &:hover {
+      border: 1px solid $orange-900;
+      color: $orange-900;
+      background: none;
+      fill: red;
+    }
+
+    &:focus {
+      border: 1px solid $orange-900;
+      color: $darkBlue-900;
+    }
+  }
+
+  &__trigger {
+    position: absolute;
+    top: 23%;
+    right: 0;
+    width: 100%;
+    height: auto;
+    border-left: none;
+  }
+
+  &__trigger-arrow {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+    width: 6px;
+    height: 11px;
+    border: none;
+    background-image: url("../../images/icons/breadcrumbs-arrow.svg");
+    @extend %bg-img;
+    transform: matrix(0, 1, 1, 0, 0, 0);
+  }
+
+  &__select-text {
+    &:hover {
+      color: $orange-900;
+    }
+  }
+
+  &__select-text:hover {
+    color: $focus;
+  }
+}
+
+.prospectus__name,
+.prospectus__num {
+  z-index: 0;
+}

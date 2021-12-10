@@ -55,7 +55,8 @@ function scripts() {
 const htmlInclude = () => {
   return src(['app/html/pages/*.html'])
     .pipe(fileInclude({
-      prefix: '@'
+      prefix: '@',
+      basepath: '@file',
     }))
     .pipe(dest('app'))
     .pipe(browserSync.stream());

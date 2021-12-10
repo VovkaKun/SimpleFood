@@ -1,0 +1,28 @@
+.filter-price {
+  height: 19%;
+
+  &__label {
+    color: $silver-200;
+    font-size: 16px;
+    line-height: 1.2;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__from,
+  &__to {
+    max-width: 30%;
+    background-color: #faeded;
+    border-radius: 5px;
+    text-align: center;
+    padding: 12px 16px;
+    border: 2px solid transparent;
+    outline-color: $orange-900;
+
+    &:focus {
+      border: 2px solid $orange-900;
+    }
+  }
+}

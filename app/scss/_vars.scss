@@ -1,12 +1,11 @@
-$dark: #31352B;
+$dark: #31352b;
 $darkBlue-900: #363853;
-$orange-900: #FF6838;
+$orange-900: #ff6838;
 $white: #fff;
-$silver-100: #F9FAFF;
+$silver-100: #f9faff;
 $silver-200: #ececec;
-$gray: #C2C2C2;
+$gray: #c2c2c2;
 $focus: #ff6738b3;
-
 
 %bg-img {
   background-position: center center;
@@ -16,7 +15,7 @@ $focus: #ff6738b3;
 
 %dynamic {
   transition: text-shadow 0.3s, color 0.3s, background-color 0.3s;
-  
+
   &:hover {
     color: $orange-900;
     text-decoration: none;
@@ -27,10 +26,6 @@ $focus: #ff6738b3;
     border: 2px solid $focus;
     border-radius: 5px;
   }
-  
-  &:focus:hover {
-    color: $dark;
-  }
 
   &:active {
     color: $dark;
@@ -38,12 +33,3 @@ $focus: #ff6738b3;
     border: 2px solid transparent;
   }
 }
-
-
-
-
-
-
-
-
-

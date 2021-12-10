@@ -1,0 +1,17 @@
+.shop {
+  &__inner {
+    display: flex;
+  }
+
+  &__filter {
+    width: 26%;
+    height: auto;
+    margin-right: 30px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+}
