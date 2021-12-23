@@ -9,6 +9,19 @@
     &:not(:last-child) {
       margin-right: 20px;
     }
+
+    @media (max-width: 540px) {
+      font-size: 13px;
+
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  &__form {
+    position: relative;
+    top: -5px;
   }
 
   &__from,
@@ -23,6 +36,17 @@
 
     &:focus {
       border: 2px solid $orange-900;
+    }
+
+    @media (max-width: 540px) {
+      max-width: 27%;
+      padding: 10px 5px;
+    }
+  }
+
+  &__many {
+    @media (max-width: 768px) {
+      margin-top: 10px;
     }
   }
 }

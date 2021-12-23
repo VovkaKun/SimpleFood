@@ -8,13 +8,17 @@
       justify-content: space-evenly;
     }
 
-    @media (max-width: 768px) {
-      margin-top: -30px;
+    &--catalog {
+      @media (max-width: 768px) {
+        margin-top: -22px;
+      }
     }
   }
 
   &__title {
-    margin: 20px 0 43px;
+    &--catalog {
+      margin: -8px 0 43px;
+    }
 
     @media (max-width: 1200px) {
       margin-bottom: 15px;

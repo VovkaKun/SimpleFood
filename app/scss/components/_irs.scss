@@ -4,15 +4,23 @@
   }
 
   &--round .irs-line {
-    top: 33px;
+    top: 32px;
     height: 2px;
     background-color: $gray;
+
+    @media (max-width: 768px) {
+      top: 7px;
+    }
   }
 
   &--round .irs-bar {
-    top: 33px;
+    top: 32px;
     height: 2px;
     background-color: $orange-900;
+
+    @media (max-width: 768px) {
+      top: 7px;
+    }
   }
 
   &--round .irs-handle.state:hover,
@@ -26,6 +34,10 @@
     height: 18px;
     border-radius: 50%;
     background-color: $orange-900;
+
+    @media (max-width: 768px) {
+      top: 0px;
+    }
   }
 
   &--round .irs-handle {

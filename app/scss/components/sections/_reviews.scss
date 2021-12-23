@@ -1,9 +1,17 @@
 .reviews {
+  &__inner {
+    margin-top: -14px;
+  }
+
+  &__box {
+    margin-top: -5px;
+  }
+
   &__item {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
 
     @media (max-width: 992px) {
       flex-direction: column;
@@ -13,6 +21,11 @@
 
   &__title {
     text-align: center;
+    margin-top: -9px;
+
+    @media (max-width: 576px) {
+      margin-top: -23px;
+    }
   }
 
   &__card {
@@ -33,10 +46,16 @@
   &__icon {
     position: absolute;
     fill: $gray;
+    stroke: $gray;
 
     &--top {
       left: -37px;
       top: 0;
+
+      @media (max-width: 992px) {
+        left: -38px;
+        top: -8px;
+      }
     }
 
     &--bottom {
@@ -44,13 +63,15 @@
       bottom: 88px;
 
       @media (max-width: 992px) {
-        right: -40px;
+        right: -36px;
+        bottom: 80px;
       }
     }
   }
 
   &__img {
     border-radius: 50%;
+    margin-top: 5px;
 
     @media (max-width: 992px) {
       width: 200px;
@@ -61,6 +82,7 @@
     @media (max-width: 576px) {
       width: 100px;
       height: 100px;
+      margin: 22px 0 28px 0;
     }
   }
 
