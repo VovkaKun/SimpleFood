@@ -1,35 +1,113 @@
 <div class="prospectus">
   <div class="container">
-    <div class="prospectus__inner">
-      <h1 class="prospectus__title">Каталог продуктов</h1>
+    <div class="prospectus__box">
       <form class="prospectus__select" action="#">
-        <select class="prospectus__name select__style">
-          <option value="">По названию</option>
-          <option value="">Главная</option>
-          <option value="">Каталог товаров</option>
-          <!-- <svg class="prospectus__arrow prospectus__arrow--name" width="11" height="6">
-            <use xlink:href="images/images.svg#prospectus-arrow"></use>
-          </svg> -->
-        </select>
-        <select class="prospectus__num select__style">
-          <option value="">по 12</option>
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
-          <option value="">4</option>
-          <option value="">5</option>
-          <option value="">6</option>
-          <option value="">7</option>
-          <option value="">8</option>
-          <option value="">9</option>
-          <option value="">10</option>
-          <option value="">11</option>
-          <option value="">12</option>
-          <!-- <svg class="prospectus__arrow prospectus__arrow--num" width="11" height="6">
-            <use xlink:href="images/images.svg#prospectus-arrow"></use>
-          </svg> -->
-        </select>
+        <button class="filter-btn" type="button">
+          <img src="../../images/img-jpg/open-filters.jpg" alt="открить фильтры">
+        </button>
+        <label class="prospectus__label">
+          <span class="sr-only">фильтр каталога товаров</span>
+          <select class="prospectus__filter select__style">
+            <option value="По названию">По названию</option>
+            <option value="Главная">Главная</option>
+            <option value="Каталог товаров">Каталог товаров</option>
+          </select>
+        </label>
+        <label class="prospectus__label">
+          <span class="sr-only">фильтр количества блюд на странице</span>
+          <select class="prospectus__filter select__style">
+            <option value="по 12">по 12</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </label>
       </form>
+    </div>
+    <div class="shop__filter filter menu__filter">
+      <div class="filter__box filter-categories">
+        <h2 class="filter__title">Категории</h2>
+        <ul class="filter-categories__menu">
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Бургеры</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Пицца</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Сендвичи</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Азиатская кухня</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Сеты</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Европейская кухня</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Напитки</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Алкоголь</a>
+          </li>
+        </ul>
+      </div>
+      <div class="filter__box filter-offers">
+        <h2 class="filter__title">Предложения</h2>
+        <form class="filter-offers__form" action="#">
+          <label class="filter-offers__label">
+            <span class="sr-only">Выберите предложения</span>
+            <input class="filter-offers__input" type="checkbox" name="offersNew">
+            <span class="filter-offers__checkbox"></span>
+            <span class="filter-offers__text">Со скидкой</span>
+          </label>
+          <label class="filter-offers__label">
+            <span class="sr-only">Выберите предложения</span>
+            <input class="filter-offers__input" type="checkbox" name="offersNew">
+            <span class="filter-offers__checkbox"></span>
+            <span class="filter-offers__text">Новинка</span>
+          </label>
+          <label class="filter-offers__label">
+            <span class="sr-only">Выберите предложения</span>
+            <input class="filter-offers__input" type="checkbox" name="offersNew">
+            <span class="filter-offers__checkbox"></span>
+            <span class="filter-offers__text">Хит</span>
+          </label>
+        </form>
+      </div>
+      <div class="filter__box filter-price">
+        <h2 class="filter__title">Цена</h2>
+        <form class="filter-price__form" action="#">
+          <div class="filter-price__many">
+            <label class="filter-price__label">
+              от
+              <input class="filter-price__from" type="text" name="minPrice" placeholder="100" required>
+              ₽
+            </label>
+            <label class="filter-price__label">
+              до
+              <input class="filter-price__to" type="text" name="maxPrice" placeholder="1000" required>
+              ₽
+            </label>
+          </div>
+          <label class="filter-price__label">
+            <span class="sr-only">Подобрать цену</span>
+            <input class="filter-price__input" type="text" name="yourPrice" required data-min="100" data-max="1000"
+              data-from="150" data-to="900">
+          </label>
+        </form>
+      </div>
     </div>
   </div>
 </div>

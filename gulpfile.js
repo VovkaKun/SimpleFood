@@ -9,7 +9,6 @@ const svgstore = require('gulp-svgstore');
 const fileInclude = require('gulp-file-include');
 const browserSync = require('browser-sync').create();
 
-
 function browsersync() {
   browserSync.init({
     server: {
@@ -29,10 +28,6 @@ function styles() {
     }))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
-}
-
-function cleanDist() {
-  return del('dist')
 }
 
 function scripts() {
@@ -91,6 +86,10 @@ function build() {
     'app/js/main.min.js',
   ], { base: 'app' })
     .pipe(dest('dist'))
+}
+
+function cleanDist() {
+  return del('dist')
 }
 
 function watching() {

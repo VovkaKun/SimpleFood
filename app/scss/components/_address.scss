@@ -1,13 +1,26 @@
 .address {
   bottom: 0;
+  margin-top: -15px;
 
   @media (max-width: 768px) {
     order: -1;
     margin-bottom: 30px;
   }
 
-  &__item {
+  &__list {
     margin-bottom: 15px;
+  }
+
+  &__item {
+    padding: 17px 70px 1px 1px;
+
+    @media (max-width: 1200px) {
+      padding: 10px 70px 3px 5px;
+    }
+
+    @media (max-width: 540px) {
+      padding: 13px 0px 3px 5px;
+    }
   }
 
   &__cont {
@@ -19,7 +32,6 @@
     color: $dark;
     stroke: $dark;
     border: 2px solid transparent;
-    padding: 6px 70px 6px 5px;
     @extend %dynamic;
   }
 
@@ -33,16 +45,16 @@
 
     @media (max-width: 768px) {
       display: block;
-      display: block;
       z-index: 9;
       left: 0;
       right: 75px;
       border-top: 1px solid #eeeff3;
-      padding: 15px 0 0 10px;
+      padding: 7px 0 0 10px;
       display: flex;
       flex-direction: column;
       height: calc(100% - 275px);
       transition: border-bottom 0.5s;
+      margin-top: -7px;
     }
   }
 }

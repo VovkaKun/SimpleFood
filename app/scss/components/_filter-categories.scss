@@ -3,8 +3,18 @@
 
   &__item {
     &:not(:last-child) {
-      margin-bottom: 12px;
+      margin-bottom: 11px;
     }
+
+    @media (max-width: 768px) {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__menu {
+    height: 83%;
   }
 
   &__link {
@@ -15,5 +25,9 @@
     outline-color: transparent;
     border: 2px solid transparent;
     @extend %dynamic;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 }

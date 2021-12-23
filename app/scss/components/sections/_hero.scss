@@ -1,46 +1,35 @@
 .hero {
-  background-image: url("../../../images/img-jpg/hero.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 87%;
-  display: flex;
-  align-items: center;
-  width: 88%;
-  position: relative;
-  z-index: 1;
-  min-height: 660px;
-
-  @media (max-width: 1200px) {
-    min-height: 9%;
-    background-position: right;
-  }
-
-  @media (max-width: 768px) {
-    min-height: 6%;
-    background-position: center;
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: $white;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0.8;
-    }
-  }
-
   &__desc {
-    max-width: 50%;
-    width: max-content;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    background-image: url("../images/img-jpg/hero.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 
     @media (max-width: 1200px) {
-      max-width: 42%;
+      max-width: 100%;
     }
 
-    @media (max-width: 576px) {
-      max-width: 100%;
+    @media (max-width: 768px) {
+      justify-content: start;
+      height: auto;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $white;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.8;
+      }
     }
   }
 
@@ -50,6 +39,7 @@
     letter-spacing: 2px;
     color: $darkBlue-900;
     margin-bottom: 20px;
+    width: 50%;
     text-transform: uppercase;
 
     @media (max-width: 1200px) {
@@ -62,18 +52,27 @@
     }
 
     @media (max-width: 768px) {
-      padding-top: 25px;
+      padding-top: 17px;
+      width: 100%;
     }
   }
 
   &__subject {
     display: block;
     color: $orange-900;
+    width: 74%;
+    letter-spacing: 0.2px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      letter-spacing: 1px;
+    }
   }
 
   &__text {
     font-size: 20px;
     margin-bottom: 26px;
+    max-width: 41%;
 
     @media (max-width: 1200px) {
       font-size: 22px;
@@ -87,6 +86,15 @@
 
     @media (max-width: 768px) {
       font-size: 16px;
+      max-width: 42%;
+    }
+
+    @media (max-width: 576px) {
+      max-width: 66%;
+    }
+
+    @media (max-width: 400px) {
+      max-width: 100%;
     }
   }
 
@@ -113,24 +121,12 @@
     }
   }
 
-  &__img {
-    @media (max-width: 1200px) {
-      width: 460px;
-      height: 560px;
-    }
-
+  &__button.button {
     @media (max-width: 992px) {
-      &__img {
-        width: 360px;
-        height: 460px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      width: 255px;
-      height: 300px;
-      opacity: 0.15;
-      margin-left: auto;
+      display: block;
+      padding: 8px 24px;
+      font-size: 14px;
+      line-height: 1.3;
     }
   }
 }

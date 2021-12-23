@@ -1,0 +1,44 @@
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: -5px;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+    padding-top: 3px;
+  }
+
+  .slick-active button {
+    background-color: $orange-900;
+  }
+
+  li:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  button {
+    font-size: 0;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $gray;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #fff2ed;
+      border: 1px solid $focus;
+      border-radius: 50%;
+    }
+
+    &:active {
+      background-color: #ffae94;
+      border: none;
+    }
+
+    &:focus {
+      border: 1px solid $orange-900;
+      border-radius: 50%;
+    }
+  }
+}

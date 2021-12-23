@@ -1,42 +1,3 @@
-.slick-dots {
-  display: flex;
-  justify-content: center;
-
-  & .slick-active button {
-    background-color: $orange-900;
-  }
-
-  & li:not(:last-child) {
-    margin-right: 15px;
-  }
-
-  & button {
-    font-size: 0;
-    padding: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: $gray;
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: #fff2ed;
-      border: 1px solid $focus;
-      border-radius: 50%;
-    }
-
-    &:active {
-      background-color: #ffae94;
-      border: none;
-    }
-
-    &:focus {
-      border: 1px solid $orange-900;
-      border-radius: 50%;
-    }
-  }
-}
-
 .slick-arrow {
   position: absolute;
   cursor: pointer;
@@ -71,9 +32,9 @@
     margin-top: 7px;
   }
 
-  &.prevarrow__btn,
-  &.nextarrow__btn {
-    width: 34px;
+  &--prev,
+  &--next {
+    width: 47px;
     height: 34px;
     margin-bottom: 6px;
 
@@ -85,13 +46,13 @@
     }
 
     @media (max-width: 576px) {
-      top: 7%;
+      top: 40px;
     }
   }
 
-  &.nextarrow__btn {
-    left: 56%;
-    margin-left: 10px;
+  &--next {
+    left: 55%;
+    margin-left: 6px;
 
     @media (max-width: 992px) {
       left: 77%;
@@ -99,18 +60,36 @@
     }
   }
 
-  &.prevarrow__btn {
-    right: 56%;
-    margin-right: 10px;
+  &--prev {
+    right: 55%;
+    margin-right: 14px;
 
     @media (max-width: 992px) {
-      right: 77%;
+      right: 71%;
       margin-left: 0;
     }
   }
-}
 
-.active {
-  fill: $orange-900;
-  stroke: $orange-900;
+  &__icon--prev {
+    width: 38px;
+    height: 38px;
+
+    @media (max-width: 992px) {
+      margin-left: -6px;
+    }
+  }
+
+  &__icon--next {
+    width: 38px;
+    height: 38px;
+
+    @media (max-width: 992px) {
+      margin-left: -6px;
+    }
+  }
+
+  &-active {
+    fill: $orange-900;
+    stroke: $orange-900;
+  }
 }

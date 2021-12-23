@@ -18,7 +18,7 @@
       <a class="logo" href="#">
         <img class="logo__img" src="images/icons/logo.svg" alt="логотип сервиса доставки еды" width="200" height="39">
       </a>
-      <button class="burger burger--fix" type="button">
+      <button class="burger burger-bg" type="button">
         <span class="sr-only">кнопка для открытия меню</span>
         <span class="burger__line burger__line--fix"></span>
       </button>
@@ -105,8 +105,8 @@
             <span class="sr-only">просмотреть корзину</span>
           </button>
         </li>
-        <button class="burger" type="button">
-          <span class="sr-only">декоративная кнопка меню</span>
+        <button class="burger burger--catalog" type="button">
+          <span class="sr-only">кнопка для открытия меню</span>
           <span class="burger__line"></span>
         </button>
       </ul>
@@ -121,7 +121,7 @@
         <a class="breadcrumbs__link" href="index.html">Главная</a>
       </li>
       <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
+        <span class="breadcrumbs__link">Каталог товаров</span>
       </li>
     </ul>
   </div>
@@ -129,41 +129,123 @@
 
 <div class="prospectus">
   <div class="container">
-    <div class="prospectus__inner">
-      <h1 class="prospectus__title">Каталог продуктов</h1>
+    <div class="prospectus__box">
       <form class="prospectus__select" action="#">
-        <select class="prospectus__name select__style">
-          <option value="">По названию</option>
-          <option value="">Главная</option>
-          <option value="">Каталог товаров</option>
-          <!-- <svg class="prospectus__arrow prospectus__arrow--name" width="11" height="6">
-            <use xlink:href="images/images.svg#prospectus-arrow"></use>
-          </svg> -->
-        </select>
-        <select class="prospectus__num select__style">
-          <option value="">по 12</option>
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
-          <option value="">4</option>
-          <option value="">5</option>
-          <option value="">6</option>
-          <option value="">7</option>
-          <option value="">8</option>
-          <option value="">9</option>
-          <option value="">10</option>
-          <option value="">11</option>
-          <option value="">12</option>
-          <!-- <svg class="prospectus__arrow prospectus__arrow--num" width="11" height="6">
-            <use xlink:href="images/images.svg#prospectus-arrow"></use>
-          </svg> -->
-        </select>
+        <button class="filter-btn" type="button">
+          <img src="../../images/img-jpg/open-filters.jpg" alt="открить фильтры">
+        </button>
+        <label class="prospectus__label">
+          <span class="sr-only">фильтр каталога товаров</span>
+          <select class="prospectus__filter select__style">
+            <option value="По названию">По названию</option>
+            <option value="Главная">Главная</option>
+            <option value="Каталог товаров">Каталог товаров</option>
+          </select>
+        </label>
+        <label class="prospectus__label">
+          <span class="sr-only">фильтр количества блюд на странице</span>
+          <select class="prospectus__filter select__style">
+            <option value="по 12">по 12</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </label>
       </form>
+    </div>
+    <div class="shop__filter filter menu__filter">
+      <div class="filter__box filter-categories">
+        <h2 class="filter__title">Категории</h2>
+        <ul class="filter-categories__menu">
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Бургеры</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Пицца</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Сендвичи</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Азиатская кухня</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Сеты</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Европейская кухня</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Напитки</a>
+          </li>
+          <li class="filter-categories__item">
+            <a class="filter-categories__link" href="#">Алкоголь</a>
+          </li>
+        </ul>
+      </div>
+      <div class="filter__box filter-offers">
+        <h2 class="filter__title">Предложения</h2>
+        <form class="filter-offers__form" action="#">
+          <label class="filter-offers__label">
+            <span class="sr-only">Выберите предложения</span>
+            <input class="filter-offers__input" type="checkbox" name="offersNew">
+            <span class="filter-offers__checkbox"></span>
+            <span class="filter-offers__text">Со скидкой</span>
+          </label>
+          <label class="filter-offers__label">
+            <span class="sr-only">Выберите предложения</span>
+            <input class="filter-offers__input" type="checkbox" name="offersNew">
+            <span class="filter-offers__checkbox"></span>
+            <span class="filter-offers__text">Новинка</span>
+          </label>
+          <label class="filter-offers__label">
+            <span class="sr-only">Выберите предложения</span>
+            <input class="filter-offers__input" type="checkbox" name="offersNew">
+            <span class="filter-offers__checkbox"></span>
+            <span class="filter-offers__text">Хит</span>
+          </label>
+        </form>
+      </div>
+      <div class="filter__box filter-price">
+        <h2 class="filter__title">Цена</h2>
+        <form class="filter-price__form" action="#">
+          <div class="filter-price__many">
+            <label class="filter-price__label">
+              от
+              <input class="filter-price__from" type="text" name="minPrice" placeholder="100" required>
+              ₽
+            </label>
+            <label class="filter-price__label">
+              до
+              <input class="filter-price__to" type="text" name="maxPrice" placeholder="1000" required>
+              ₽
+            </label>
+          </div>
+          <label class="filter-price__label">
+            <span class="sr-only">Подобрать цену</span>
+            <input class="filter-price__input" type="text" name="yourPrice" required data-min="100" data-max="1000"
+              data-from="150" data-to="900">
+          </label>
+        </form>
+      </div>
     </div>
   </div>
 </div>
 
 <main class="main">
+
+  <div class="container">
+    <h1 class="title--catalog">Каталог продуктов</h1>
+  </div>
 
   <section class="shop section">
   <div class="container">
@@ -171,7 +253,7 @@
       <div class="shop__filter filter">
 
         <div class="filter__box filter-categories">
-          <h3 class="filter__title">Категории</h3>
+          <h2 class="filter__title">Категории</h2>
           <ul class="filter-categories__menu">
             <li class="filter-categories__item">
               <a class="filter-categories__link" href="#">Бургеры</a>
@@ -201,23 +283,23 @@
         </div>
 
         <div class="filter__box filter-offers">
-          <h3 class="filter__title">Предложения</h3>
+          <h2 class="filter__title">Предложения</h2>
           <form class="filter-offers__form" action="#">
             <label class="filter-offers__label">
               <span class="sr-only">Выберите предложения</span>
-              <input class="filter-offers__input" type="checkbox" name="offersNew" required>
+              <input class="filter-offers__input" type="checkbox" name="offersNew">
               <span class="filter-offers__checkbox"></span>
               <span class="filter-offers__text">Со скидкой</span>
             </label>
             <label class="filter-offers__label">
               <span class="sr-only">Выберите предложения</span>
-              <input class="filter-offers__input" type="checkbox" name="offersNew" required>
+              <input class="filter-offers__input" type="checkbox" name="offersNew">
               <span class="filter-offers__checkbox"></span>
               <span class="filter-offers__text">Новинка</span>
             </label>
             <label class="filter-offers__label">
               <span class="sr-only">Выберите предложения</span>
-              <input class="filter-offers__input" type="checkbox" name="offersNew" required>
+              <input class="filter-offers__input" type="checkbox" name="offersNew">
               <span class="filter-offers__checkbox"></span>
               <span class="filter-offers__text">Хит</span>
             </label>
@@ -225,7 +307,7 @@
         </div>
 
         <div class="filter__box filter-price">
-          <h3 class="filter__title">Цена</h3>
+          <h2 class="filter__title">Цена</h2>
           <form class="filter-price__form" action="#">
             <div class="filter-price__many">
               <label class="filter-price__label">
@@ -240,22 +322,24 @@
               </label>
             </div>
             <label class="filter-price__label">
-              <span class="sr-only">Введите цену</span>
+              <span class="sr-only">Подобрать цену</span>
               <input class="filter-price__input" type="text" name="yourPrice" required data-min="100" data-max="1000"
                 data-from="150" data-to="900">
             </label>
           </form>
         </div>
       </div>
+      <!-- без popular__list не працював слайдер на сторінці калалог.html і в консолі були помилки -->
+      <ul class="popular__list sr-only"></ul>
       <div class="shop__dish">
         <ul class="shop__list">
           <li class="shop__item">
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/1.jpg" width="140" height="140"
                 alt="Чизбургер с листьями">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Чизбургер с листьями салата
-              </h3>
+              </h2>
               <span class="product-card__price">
                 160 <span class="product-card__currency">руб.</span>
               </span>
@@ -267,9 +351,9 @@
           <li class="shop__item">
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/2.jpg" width="140" height="140" alt="Бифбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Бифбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 190 <span class="product-card__currency">руб.</span>
               </span>
@@ -282,9 +366,9 @@
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/3.jpg" width="140" height="140"
                 alt="Королевский чизбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Королевский чизбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 260 <span class="product-card__currency">руб.</span>
               </span>
@@ -297,9 +381,9 @@
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/4.jpg" width="140" height="140"
                 alt="Черный гамбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Черный гамбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 199 <span class="product-card__currency">руб.</span>
               </span>
@@ -312,9 +396,9 @@
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/1.jpg" width="140" height="140"
                 alt="Чизбургер с листьями">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Чизбургер с листьями салата
-              </h3>
+              </h2>
               <span class="product-card__price">
                 160 <span class="product-card__currency">руб.</span>
               </span>
@@ -326,9 +410,9 @@
           <li class="shop__item">
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/2.jpg" width="140" height="140" alt="Бифбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Бифбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 190 <span class="product-card__currency">руб.</span>
               </span>
@@ -338,12 +422,12 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/3.jpg" width="140" height="140"
                 alt="Королевский чизбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Королевский чизбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 260 <span class="product-card__currency">руб.</span>
               </span>
@@ -353,12 +437,12 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/4.jpg" width="140" height="140"
                 alt="Черный гамбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Черный гамбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 199 <span class="product-card__currency">руб.</span>
               </span>
@@ -368,12 +452,12 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/1.jpg" width="140" height="140"
                 alt="Чизбургер с листьями">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Чизбургер с листьями салата
-              </h3>
+              </h2>
               <span class="product-card__price">
                 160 <span class="product-card__currency">руб.</span>
               </span>
@@ -383,11 +467,11 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/2.jpg" width="140" height="140" alt="Бифбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Бифбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 190 <span class="product-card__currency">руб.</span>
               </span>
@@ -397,12 +481,12 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/3.jpg" width="140" height="140"
                 alt="Королевский чизбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Королевский чизбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 260 <span class="product-card__currency">руб.</span>
               </span>
@@ -412,12 +496,12 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/4.jpg" width="140" height="140"
                 alt="Черный гамбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Черный гамбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 199 <span class="product-card__currency">руб.</span>
               </span>
@@ -429,12 +513,12 @@
         </ul>
         <div class="pagination">
           <a class="pagination__prev pagination__arrows" href="#"
-            style="background-image: url('../../images/icons/pagination-left.svg');">
-            <span class="sr-only">стрелки для пролистывания страниц</span>
+            style="background-image: url('../images/icons/pagination-left.svg');">
+            <span class="sr-only">стрелки для пролистывания страниц назад</span>
           </a>
           <ul class="pagination__list">
             <li class="pagination__item">
-              <a class="pagination__link pagination__link--active" href="#">1</a>
+              <span class="pagination__link pagination__link--active">1</span>
             </li>
             <li class="pagination__item">
               <a class="pagination__link" href="#">2</a>
@@ -450,8 +534,8 @@
             </li>
           </ul>
           <a class="pagination__next pagination__arrows" href="#"
-            style="background-image: url('../../images/icons/pagination-right.png');">
-            <span class="sr-only">стрелки для пролистывания страниц</span>
+            style="background-image: url('../images/icons/pagination-right.svg');">
+            <span class="sr-only">стрелки для пролистывания страниц вперед</span>
           </a>
         </div>
       </div>
@@ -461,9 +545,9 @@
 
   <section class="app section">
   <div class="container">
-    <div class="app__inner">
+    <div class="app__inner app__inner--catalog">
       <div class="app__desc">
-        <h2 class="title app__title">
+        <h2 class="title app__title app__title--catalog">
           Скачайте мобильное приложение
         </h2>
         <p class="app__text">
@@ -489,10 +573,10 @@
 
   <section class="restaurant section">
   <div class="container">
-    <h2 class="title">
+    <h2 class="title restaurant--title">
       Акции и скидки
     </h2>
-    <ul class="restaurant__list">
+    <ul class="restaurant__list restaurant__list--catalog">
       <li class="restaurant__item">
         <article class="restaurant-card">
           <img class="restaurant-card__image" src="images/img-jpg/1res.jpg" width="370" height="300"
@@ -540,43 +624,43 @@
           </button>
         </form>
       </div>
-      <nav class="footer__menu">
-        <ul class="footer__list">
-          <li class="footer__item">
-            <a class="footer__link" href="#">Как это работает</a>
+      <nav class="menu">
+        <ul class="menu__list menu__list--footer">
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">Как это работает</a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Продукты</a>
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">Продукты</a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Блюда</a>
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">Блюда</a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Меню</a>
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">Меню</a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">О нас</a>
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">О нас</a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Новости</a>
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">Новости</a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Партнеры</a>
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">Партнеры</a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">ЧаВо</a>
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">ЧаВо</a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Скачать приложение</a>
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">Скачать приложение</a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Блог</a>
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">Блог</a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Что нового?</a>
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">Что нового?</a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Карта сайта</a>
+          <li class="menu__item menu__item--footer">
+            <a class="menu__link" href="#">Карта сайта</a>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,10 @@
 .burger {
   display: none;
+
+  &-bg.none {
+    display: none;
+  }
+
   @media (max-width: 768px) {
     width: 47px;
     height: 44px;
@@ -11,11 +16,12 @@
     top: 23px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 3px;
-    border: 0;
     padding: 7px;
+    margin-top: -10px;
     outline-color: $orange-900;
     border: 2px solid transparent;
-    z-index: 11;
+    z-index: 12;
+    background-color: transparent;
     transition: border 0.3s, background-color 0.3s;
 
     &:focus {
@@ -55,9 +61,15 @@
       }
     }
 
+    &__line--fix.active,
+    &__line.active {
+      background-color: transparent;
+    }
+
     &.active {
       background-color: transparent;
-      right: 100px;
+      right: 87px;
+      top: 32px;
 
       &:active {
         background-color: #fff2ed;
@@ -65,8 +77,9 @@
       }
     }
 
-    &__line.active {
-      background-color: transparent;
+    &--catalog.active.burger {
+      right: 87px;
+      top: 32px;
     }
 
     &__line.active::before {
@@ -86,24 +99,15 @@
     }
   }
 
-  &__line--fix {
-    transform: rotate(0deg);
+  &__line {
+    &--fix {
+      transform: rotate(0deg);
+    }
   }
 
-  &--fix {
-    width: 47px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 15px;
-    top: 23px;
-    background-color: transparent;
-    border-radius: 3px;
-    border: 0;
-    padding: 7px;
-    outline-color: $orange-900;
-    border: 2px solid transparent;
+  &--catalog.active.bg {
+    background-color: #faeded;
+    right: 72px;
+    top: 29px;
   }
 }

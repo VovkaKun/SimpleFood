@@ -2,7 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 64px;
+  margin-right: 20px;
+
+  @media (max-width: 768px) {
+    padding-top: 0;
+    margin-right: 0;
+  }
 
   &__list {
     display: flex;
@@ -11,6 +17,12 @@
 
   &__item {
     padding: 0 3px;
+
+    @media (max-width: 768px) {
+      &:nth-child(even) {
+        display: none;
+      }
+    }
   }
 
   &__link {
@@ -32,6 +44,6 @@
     background-color: #faeded;
     width: 11px;
     height: 20px;
-    padding: 22px;
+    padding: 23px;
   }
 }

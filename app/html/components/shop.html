@@ -4,7 +4,7 @@
       <div class="shop__filter filter">
 
         <div class="filter__box filter-categories">
-          <h3 class="filter__title">Категории</h3>
+          <h2 class="filter__title">Категории</h2>
           <ul class="filter-categories__menu">
             <li class="filter-categories__item">
               <a class="filter-categories__link" href="#">Бургеры</a>
@@ -34,23 +34,23 @@
         </div>
 
         <div class="filter__box filter-offers">
-          <h3 class="filter__title">Предложения</h3>
+          <h2 class="filter__title">Предложения</h2>
           <form class="filter-offers__form" action="#">
             <label class="filter-offers__label">
               <span class="sr-only">Выберите предложения</span>
-              <input class="filter-offers__input" type="checkbox" name="offersNew" required>
+              <input class="filter-offers__input" type="checkbox" name="offersNew">
               <span class="filter-offers__checkbox"></span>
               <span class="filter-offers__text">Со скидкой</span>
             </label>
             <label class="filter-offers__label">
               <span class="sr-only">Выберите предложения</span>
-              <input class="filter-offers__input" type="checkbox" name="offersNew" required>
+              <input class="filter-offers__input" type="checkbox" name="offersNew">
               <span class="filter-offers__checkbox"></span>
               <span class="filter-offers__text">Новинка</span>
             </label>
             <label class="filter-offers__label">
               <span class="sr-only">Выберите предложения</span>
-              <input class="filter-offers__input" type="checkbox" name="offersNew" required>
+              <input class="filter-offers__input" type="checkbox" name="offersNew">
               <span class="filter-offers__checkbox"></span>
               <span class="filter-offers__text">Хит</span>
             </label>
@@ -58,7 +58,7 @@
         </div>
 
         <div class="filter__box filter-price">
-          <h3 class="filter__title">Цена</h3>
+          <h2 class="filter__title">Цена</h2>
           <form class="filter-price__form" action="#">
             <div class="filter-price__many">
               <label class="filter-price__label">
@@ -73,22 +73,24 @@
               </label>
             </div>
             <label class="filter-price__label">
-              <span class="sr-only">Введите цену</span>
+              <span class="sr-only">Подобрать цену</span>
               <input class="filter-price__input" type="text" name="yourPrice" required data-min="100" data-max="1000"
                 data-from="150" data-to="900">
             </label>
           </form>
         </div>
       </div>
+      <!-- без popular__list не працював слайдер на сторінці калалог.html і в консолі були помилки -->
+      <ul class="popular__list sr-only"></ul>
       <div class="shop__dish">
         <ul class="shop__list">
           <li class="shop__item">
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/1.jpg" width="140" height="140"
                 alt="Чизбургер с листьями">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Чизбургер с листьями салата
-              </h3>
+              </h2>
               <span class="product-card__price">
                 160 <span class="product-card__currency">руб.</span>
               </span>
@@ -100,9 +102,9 @@
           <li class="shop__item">
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/2.jpg" width="140" height="140" alt="Бифбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Бифбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 190 <span class="product-card__currency">руб.</span>
               </span>
@@ -115,9 +117,9 @@
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/3.jpg" width="140" height="140"
                 alt="Королевский чизбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Королевский чизбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 260 <span class="product-card__currency">руб.</span>
               </span>
@@ -130,9 +132,9 @@
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/4.jpg" width="140" height="140"
                 alt="Черный гамбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Черный гамбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 199 <span class="product-card__currency">руб.</span>
               </span>
@@ -145,9 +147,9 @@
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/1.jpg" width="140" height="140"
                 alt="Чизбургер с листьями">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Чизбургер с листьями салата
-              </h3>
+              </h2>
               <span class="product-card__price">
                 160 <span class="product-card__currency">руб.</span>
               </span>
@@ -159,9 +161,9 @@
           <li class="shop__item">
             <article class="product-card">
               <img class="product-card__img" src="../../images/img-jpg/2.jpg" width="140" height="140" alt="Бифбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Бифбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 190 <span class="product-card__currency">руб.</span>
               </span>
@@ -171,12 +173,12 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/3.jpg" width="140" height="140"
                 alt="Королевский чизбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Королевский чизбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 260 <span class="product-card__currency">руб.</span>
               </span>
@@ -186,12 +188,12 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/4.jpg" width="140" height="140"
                 alt="Черный гамбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Черный гамбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 199 <span class="product-card__currency">руб.</span>
               </span>
@@ -201,12 +203,12 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/1.jpg" width="140" height="140"
                 alt="Чизбургер с листьями">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Чизбургер с листьями салата
-              </h3>
+              </h2>
               <span class="product-card__price">
                 160 <span class="product-card__currency">руб.</span>
               </span>
@@ -216,11 +218,11 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/2.jpg" width="140" height="140" alt="Бифбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Бифбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 190 <span class="product-card__currency">руб.</span>
               </span>
@@ -230,12 +232,12 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/3.jpg" width="140" height="140"
                 alt="Королевский чизбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Королевский чизбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 260 <span class="product-card__currency">руб.</span>
               </span>
@@ -245,12 +247,12 @@
             </article>
           </li>
           <li class="shop__item">
-            <article class="product-card">
+            <article class="product-card product-card--invisible">
               <img class="product-card__img" src="../../images/img-jpg/4.jpg" width="140" height="140"
                 alt="Черный гамбургер">
-              <h3 class="product-card__name">
+              <h2 class="product-card__name">
                 Черный гамбургер
-              </h3>
+              </h2>
               <span class="product-card__price">
                 199 <span class="product-card__currency">руб.</span>
               </span>
@@ -262,12 +264,12 @@
         </ul>
         <div class="pagination">
           <a class="pagination__prev pagination__arrows" href="#"
-            style="background-image: url('../../images/icons/pagination-left.svg');">
-            <span class="sr-only">стрелки для пролистывания страниц</span>
+            style="background-image: url('../images/icons/pagination-left.svg');">
+            <span class="sr-only">стрелки для пролистывания страниц назад</span>
           </a>
           <ul class="pagination__list">
             <li class="pagination__item">
-              <a class="pagination__link pagination__link--active" href="#">1</a>
+              <span class="pagination__link pagination__link--active">1</span>
             </li>
             <li class="pagination__item">
               <a class="pagination__link" href="#">2</a>
@@ -283,8 +285,8 @@
             </li>
           </ul>
           <a class="pagination__next pagination__arrows" href="#"
-            style="background-image: url('../../images/icons/pagination-right.png');">
-            <span class="sr-only">стрелки для пролистывания страниц</span>
+            style="background-image: url('../images/icons/pagination-right.svg');">
+            <span class="sr-only">стрелки для пролистывания страниц вперед</span>
           </a>
         </div>
       </div>
